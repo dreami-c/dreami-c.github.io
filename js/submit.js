@@ -4,10 +4,10 @@ function SubForm (){
     type:"post",
     data:$("#myForm").serializeArray(),
     success: function(){
-      alert("Form Data Submitted :)")
+      alert("Answers submitted. Thanks for participating!")
     },
     error: function(){
-      alert("There was an error :(")
+      alert("There was an error submitting your answers. Please try again.")
     }
   });
 }
