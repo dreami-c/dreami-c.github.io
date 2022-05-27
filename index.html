@@ -10,83 +10,446 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
    <!-- Stylesheets -->
-   <script src="js/submit.js"></script>
-   <script src="js/display.js"></script>
    <link rel="stylesheet" type="text/css" href="css/style.css" />
    <!-- Bootstrap CSS -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> </head>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
+</head>
 
 <body>
-   <!-- Body -->
    <div class="container">
       <div class="card border-0">
          <div class="card-body">
-            <!-- Survey Form -->
             <form id="myForm">
-               <!-- Frequency -->
-               <div id="freq">
-                  <h2>Choose your frequency</h2>
-                  <div class="form-check form-check-inline">
-                     <input type="checkbox" class="form-check-input" id="freq1" name="freq1" value="Each class" onclick="myFunction()">
-                     <label>Each class </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                     <input type="checkbox" class="form-check-input" id="freq2" name="freq2" value="Each week" onclick="myFunction()">
-                     <label>Each week</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                     <input type="checkbox" class="form-check-input" id="freq3" name="freq3" value="Each month" onclick="myFunction()">
-                     <label>Each month</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                     <input type="checkbox" class="form-check-input" id="freq4" name="freq4" value="Each term" onclick="myFunction()">
-                     <label>Each term</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                     <input type="checkbox" class="form-check-input" id="freq5" name="freq5" value="Each year" onclick="myFunction()">
-                     <label>Each year</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                     <input type="checkbox" class="form-check-input" id="freq6" name="freq6" value="Each unit" onclick="myFunction()">
-                     <label>Each unit</label>
-                  </div>
+               <div class="tab">
+                  <h4>1. When?</h4>
+                  <!-- Moment -->
+                  <div id="mom">
+                     <h2>Choose your moment</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="mom1" name="mom1" value="Right after class" onclick="displayMom()">
+                        <label>Right after class</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="mom2" name="mom2" value="For preperation of next lesson" onclick="displayMom()">
+                        <label>For preperation of next lesson</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="mom3" name="mom3" value="After the week" onclick="displayMom()">
+                        <label>After the week</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="mom4" name="mom4" value="After a month" onclick="displayMom()">
+                        <label>After a month</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="mom5" name="mom5" value="After a term" onclick="displayMom()">
+                        <label>After a term</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="mom6" name="mom6" value="At the end of the school day" onclick="displayMom()">
+                        <label>At the end of the school day</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="mom7" name="mom7" value="For preperation of next unit" onclick="displayMom()">
+                        <label>For preperation of next unit</label>
+                     </div>
+                     <input id="other" name="momOther" type="text" placeholder="Other" /> </div>
+                  <!-- Moment -->
+                  <br>
+                  <!-- Frequency -->
+                  <div id="freq">
+                     <h2>Choose your frequency</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="freq1" name="freq1" value="Each class" onclick="displayFreq()">
+                        <label>Each class</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="freq2" name="freq2" value="Each week" onclick="displayFreq()">
+                        <label>Each week</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="freq3" name="freq3" value="Each month" onclick="displayFreq()">
+                        <label>Each month</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="freq4" name="freq4" value="Each term" onclick="displayFreq()">
+                        <label>Each term</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="freq5" name="freq5" value="Each year" onclick="displayFreq()">
+                        <label>Each year</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="freq6" name="freq6" value="Each unit" onclick="displayFreq()">
+                        <label>Each unit</label>
+                     </div>
+                     <input id="other" name="freqOther" type="text" placeholder="Other" /> </div>
+                  <!-- Frequency -->
+                  <br>
+                  <!-- Duration -->
+                  <div id="dur">
+                     <h2>Choose your duration</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="dur1" name="dur1" value="10 mins" onclick="displayDur()">
+                        <label>10 mins</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="dur2" name="dur2" value="30 mins" onclick="displayDur()">
+                        <label>30 mins</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="dur3" name="dur3" value="1 hour" onclick="displayDur()">
+                        <label>1 hour</label>
+                     </div>
+                     <input id="other" name="durOther" type="text" placeholder="Other" /> </div>
+                  <!-- Duration -->
                </div>
-               <!-- Frequency -->
+               <div class="tab">
+                  <h4>2. What?</h4>
+                  <!-- Content -->
+                  <div id="con">
+                     <h2>Choose your content</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="con1" name="con1" value="Student learning" onclick="displayCon()">
+                        <label>Student learning</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="con2" name="con2" value="Struggle with content" onclick="displayCon()">
+                        <label>Struggle with content</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="con3" name="con3" value="Teaching method" onclick="displayCon()">
+                        <label>Teaching method</label>
+                     </div>
+                     <input id="other" name="conOther" type="text" placeholder="Other" /> </div>
+                  <!-- Content -->
+                  <br>
+                  <!-- Pedagoly -->
+                  <div id="ped">
+                     <h2>Choose your pedagoly</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="ped1" name="ped1" value="Position" onclick="displayPed()">
+                        <label>Position</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="ped2" name="ped2" value="Attention distribution" onclick="displayPed()">
+                        <label>Attention distribution</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="ped3" name="ped3" value="Student behaviors" onclick="displayPed()">
+                        <label>Student behaviors</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="ped4" name="ped4" value="Orchestration aspects" onclick="displayPed()">
+                        <label>Orchestration aspects</label>
+                     </div>
+                     <input id="other" name="pedOther" type="text" placeholder="Other" /> </div>
+                  <!-- Pedagoly -->
+                  <br>
+                  <!-- Technology -->
+                  <div id="tech">
+                     <h2>Choose your technology</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="tech1" name="tech1" value="Use of ITS" onclick="displayTech()">
+                        <label>Use of ITS</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="tech2" name="tech2" value="Use of teacher dashboard" onclick="displayTech()">
+                        <label>Use of teacher dashboard</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="tech3" name="tech3" value="Tech integration into lessons" onclick="displayTech()">
+                        <label>Tech integration into lessons</label>
+                     </div>
+                     <input id="other" name="techOther" type="text" placeholder="Other" /> </div>
+                  <!-- Technology -->
+               </div>
+               <div class="tab">
+                  <h4>3. Where?</h4>
+                  <!-- Facilitation -->
+                  <div id="fac">
+                     <h2>Choose your facilitation</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="fac1" name="fac1" value="Individual" onclick="displayFac()">
+                        <label>Individual (self)</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="fac2" name="fac2" value="With a peer" onclick="displayFac()">
+                        <label>With a peer</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="fac3" name="fac3" value="Group reflection" onclick="displayFac()">
+                        <label>Group reflection</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="fac4" name="fac4" value="Coaching by someone" onclick="displayFac()">
+                        <label>Coaching by someone</label>
+                     </div>
+                     <input id="other" name="facOther" type="text" placeholder="Other" /> </div>
+                  <!-- Facilitation -->
+                  <br>
+                  <!-- Location -->
+                  <div id="loc">
+                     <h2>Choose your location</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="loc1" name="loc1" value="Co-located" onclick="displayLoc()">
+                        <label>Co-located</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="loc2" name="loc2" value="Online" onclick="displayLoc()">
+                        <label>Online</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="loc3" name="loc3" value="Roundtable" onclick="displayLoc()">
+                        <label>Roundtable</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="loc4" name="loc4" value="Asynchronous" onclick="displayLoc()">
+                        <label>Asynchronous</label>
+                     </div>
+                     <input id="other" name="locOther" type="text" placeholder="Other" /> </div>
+                  <!-- Location -->
+                  <br>
+                  <!-- Medium -->
+                  <div id="med">
+                     <h2>Choose your medium</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="med1" name="med1" value="Digital tool" onclick="displayMed()">
+                        <label>Digital tool</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="med2" name="med2" value="Zoom" onclick="displayMed()">
+                        <label>Zoom</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="med3" name="med3" value="Discussion board" onclick="displayMed()">
+                        <label>Discussion board</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="med4" name="med4" value="No tool" onclick="displayMed()">
+                        <label>No tool</label>
+                     </div>
+                     <input id="other" name="medOther" type="text" placeholder="Other" /> </div>
+                  <!-- Medium -->
+               </div>
+               <div class="tab">
+                  <h4>4. How?</h4>
+                  <!-- Evidence -->
+                  <div id="evi">
+                     <h2>Choose your evidence</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="evi1" name="evi1" value="Video" onclick="displayEvi()">
+                        <label>Video</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="evi2" name="evi2" value="Recalling from experience" onclick="displayEvi()">
+                        <label>Recalling from experience</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="evi3" name="evi3" value="Data from students using ITS" onclick="displayEvi()">
+                        <label>Data from students using ITS (behaviors)</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="evi4" name="evi4" value="Audio" onclick="displayEvi()">
+                        <label>Audio</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="evi5" name="evi5" value="Teacher data" onclick="displayEvi()">
+                        <label>Teacher data (behaviors)</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="evi6" name="evi6" value="Direct student feedback" onclick="displayEvi()">
+                        <label>Direct student feedback</label>
+                     </div>
+                     <input id="other" name="eviOther" type="text" placeholder="Other" /> </div>
+                  <!-- Evidence -->
+                  <br>
+                  <!-- Prompt -->
+                  <div id="pro">
+                     <h2>Choose your prompt</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="pro1" name="pro1" value="Oral prompt" onclick="displayPro()">
+                        <label>Oral prompt</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="pro2" name="pro2" value="Written prompt" onclick="displayPro()">
+                        <label>Written prompt</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="pro3" name="pro3" value="Scripted roles" onclick="displayPro()">
+                        <label>Scripted roles</label>
+                     </div>
+                     <input id="other" name="proOther" type="text" placeholder="Other" /> </div>
+                  <!-- Prompt -->
+                  <br>
+                  <!-- Access -->
+                  <div id="acc">
+                     <h2>Choose who has access to the data</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="acc1" name="acc1" value="Only me" onclick="displayAcc()">
+                        <label>Only me</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="acc2" name="acc2" value="Me and my collaborating peer" onclick="displayAcc()">
+                        <label>Me and my collaborating peer</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="acc3" name="acc3" value="My coach" onclick="displayAcc()">
+                        <label>My coach</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="acc4" name="acc4" value="Principal" onclick="displayAcc()">
+                        <label>Principal</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="acc5" name="acc5" value="Other administrator" onclick="displayAcc()">
+                        <label>Other administrator</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="acc6" name="acc6" value="Tool developers" onclick="displayAcc()">
+                        <label>Tool developers</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="acc7" name="acc7" value="Researchers" onclick="displayAcc()">
+                        <label>Researchers</label>
+                     </div>
+                     <input id="other" name="accOther" type="text" placeholder="Other" /> </div>
+                  <!-- Access -->
+                  <br>
+                  <!-- Outcome -->
+                  <div id="out">
+                     <h2>Choose your outcome of reflection</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="out1" name="out1" value="Writing" onclick="displayOut()">
+                        <label>Writing</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="out2" name="out2" value="Audio" onclick="displayOut()">
+                        <label>Audio</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="out3" name="out3" value="Video" onclick="displayOut()">
+                        <label>Video</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="out4" name="out4" value="Data visualization with summaries" onclick="displayOut()">
+                        <label>Data visualization with summaries</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="out5" name="out5" value="Other administrator" onclick="displayOut()">
+                        <label>Other administrator</label>
+                     </div>
+                     <input id="other" name="outOther" type="text" placeholder="Other" /> </div>
+                  <!-- Outcome -->
+                  <br>
+                  <!-- Sustain -->
+                  <div id="sus">
+                     <h2>Choose how you sustain</h2>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="sus1" name="sus1" value="Access to previous reflections" onclick="displaySus()">
+                        <label>Access to previous reflections</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="sus2" name="sus2" value="Access to other reflecting teachers" onclick="displaySus()">
+                        <label>Access to other reflecting teachers</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="sus3" name="sus3" value="Support from researchers" onclick="displaySus()">
+                        <label>Support from researchers</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="sus4" name="sus4" value="Support from coaches" onclick="displaySus()">
+                        <label>Support from coaches</label>
+                     </div>
+                     <input id="other" name="susOther" type="text" placeholder="Other" /> </div>
+                  <!-- Sustain -->
+               </div>
+               <div class="tab">
+                  <h4>5. When? pt.2</h4>
+                  <h2>Your selected moment:</h2>
+                  <p id="momResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyMom" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
+                  <h2>Your selected frequency:</h2>
+                  <p id="freqResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyFreq" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
+                  <h2>Your selected duration:</h2>
+                  <p id="durResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyDur" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here"> </div>
+               <div class="tab">
+                  <h4>6. What? pt.2</h4>
+                  <h2>Your selected content:</h2>
+                  <p id="conResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyCon" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
+                  <h2>Your selected pedagoly:</h2>
+                  <p id="pedResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyPed" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
+                  <h2>Your selected technology:</h2>
+                  <p id="techResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyTech" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here"> </div>
+               <div class="tab">
+                  <h4>6. Where? pt.2</h4>
+                  <h2>Your selected facilitation:</h2>
+                  <p id="facResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyFac" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
+                  <h2>Your selected location:</h2>
+                  <p id="locResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyLoc" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
+                  <h2>Your selected medium:</h2>
+                  <p id="medResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyMed" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here"> </div>
+               <div class="tab">
+                  <h4>6. How? pt.2</h4>
+                  <h2>Your selected evidence:</h2>
+                  <p id="eviResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyEvi" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
+                  <h2>Your selected prompt:</h2>
+                  <p id="proResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyPro" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
+                  <h2>Who has access:</h2>
+                  <p id="accResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyAcc" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
+                  <h2>Your selected reflection outcome</h2>
+                  <p id="outResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whyOut" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
+                  <h2>How you sustain</h2>
+                  <p id="susResults">None</p>
+                  <label>Why did you select this?</label>
+                  <input type="text" name="whySus" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here"> </div>
                <br>
-               <!-- Duration -->
-               <div id="dur">
-                  <h2>Choose your duration</h2>
-                  <div class="form-check form-check-inline">
-                     <input type="checkbox" class="form-check-input" id="dur1" name="dur1" value="10 mins" onclick="myFunction2()">
-                     <label>10 mins</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                     <input type="checkbox" class="form-check-input" id="dur2" name="dur2" value="30 mins" onclick="myFunction2()">
-                     <label>30 mins</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                     <input type="checkbox" class="form-check-input" id="dur3" name="dur3" value="1 hour" onclick="myFunction2()">
-                     <label>1 hour</label>
-                  </div>
+               <div class="text-end">
+                  <button type="button" class="btn btn-dark" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                  <button type="button" class="btn btn-dark" id="nextBtn" onclick="nextPrev(1)">Next</button>
                </div>
-               <!-- Duration -->
             </form>
-            <!-- Survey Form -->
-            <br>
-            <!-- Results -->
-            <div class="card p-2">
-               <h3>Frequency</h3> <span id="results">None</span>
-               <br>
-               <h3>Duration</h3> <span id="results2">None</span> </div>
-            <!-- Results -->
-            <br>
-            <button onclick="SubForm()" class="btn btn-dark">Submit</button>
          </div>
       </div>
    </div>
-   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
-   </script>
-   <!-- Body -->
+   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+   <script src="js/submit.js"></script>
+   <script src="js/display.js"></script>
 </body>
 
 </html>

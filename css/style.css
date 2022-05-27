@@ -1,3 +1,7 @@
+h1 {
+	font-size: 25px!important;
+}
+
 h2 {
 	font-size: 22px!important;
 	margin-bottom: 1%!important;
@@ -7,6 +11,31 @@ h3 {
 	font-size: 16px!important;
 }
 
+h4 {
+	font-size: 16px!important;
+	color: #808080!important;
+	margin-top: 1%!important;
+	margin-bottom: 1%!important;
+}
+
 body {
 	background-color: #212529!important;
+}
+
+.tab {
+  display: none;
+}
+
+.tab2 {
+  display: block;
+}
+
+.btn-dark:focus {
+  outline: none!important;
+  box-shadow: none!important;
+}
+
+.btn-dark:hover {
+  background-color: #505050!important;
+  border-color: #505050!important;
 }
