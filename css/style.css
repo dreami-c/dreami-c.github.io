@@ -26,10 +26,6 @@ body {
   display: none;
 }
 
-.tab2 {
-  display: block;
-}
-
 .btn-dark:focus {
   outline: none!important;
   box-shadow: none!important;
