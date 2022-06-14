@@ -8,20 +8,35 @@
    <!-- Links -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
    <!-- Stylesheets -->
    <link rel="stylesheet" type="text/css" href="css/style.css" />
    <!-- Bootstrap CSS -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
-</head>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> </head>
 
 <body>
    <div class="container">
       <div class="card border-0">
          <div class="card-body">
+            <div class="progress">
+               <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br>
+            <div class="tab">
+               <h1>Make your Own Burger Activity</h1> [Placeholder for consent form and description of activity]
+               <br>
+               <br>
+               <h3>By checking the box below, you confirm that you have read and understand the information above.</h3>
+               <input type="checkbox" class="form-check-input" id="consent" name="consent" value="Yes">
+               <label>I consent to participate in this study</label>
+               <br>
+            </div>
             <form id="myForm">
                <div class="tab">
-                  <h4>1. When?</h4>
+                  <h4>1. Background</h4></div>
+               <div class="tab">
+                  <h4>2. When?</h4>
                   <!-- Moment -->
                   <div id="mom">
                      <h2>Choose your moment</h2>
@@ -54,6 +69,12 @@
                         <label>For preperation of next unit</label>
                      </div>
                      <input id="other" name="momOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyMom" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Moment -->
                   <br>
                   <!-- Frequency -->
@@ -84,6 +105,12 @@
                         <label>Each unit</label>
                      </div>
                      <input id="other" name="freqOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyFreq" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Frequency -->
                   <br>
                   <!-- Duration -->
@@ -102,10 +129,16 @@
                         <label>1 hour</label>
                      </div>
                      <input id="other" name="durOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyDur" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Duration -->
                </div>
                <div class="tab">
-                  <h4>2. What?</h4>
+                  <h4>3. What?</h4>
                   <!-- Content -->
                   <div id="con">
                      <h2>Choose your content</h2>
@@ -122,6 +155,12 @@
                         <label>Teaching method</label>
                      </div>
                      <input id="other" name="conOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyCon" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Content -->
                   <br>
                   <!-- Pedagoly -->
@@ -144,6 +183,12 @@
                         <label>Orchestration aspects</label>
                      </div>
                      <input id="other" name="pedOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyPed" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Pedagoly -->
                   <br>
                   <!-- Technology -->
@@ -162,10 +207,16 @@
                         <label>Tech integration into lessons</label>
                      </div>
                      <input id="other" name="techOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyTech" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Technology -->
                </div>
                <div class="tab">
-                  <h4>3. Where?</h4>
+                  <h4>4. Where?</h4>
                   <!-- Facilitation -->
                   <div id="fac">
                      <h2>Choose your facilitation</h2>
@@ -186,6 +237,12 @@
                         <label>Coaching by someone</label>
                      </div>
                      <input id="other" name="facOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyFac" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Facilitation -->
                   <br>
                   <!-- Location -->
@@ -208,6 +265,12 @@
                         <label>Asynchronous</label>
                      </div>
                      <input id="other" name="locOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyLoc" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Location -->
                   <br>
                   <!-- Medium -->
@@ -230,10 +293,16 @@
                         <label>No tool</label>
                      </div>
                      <input id="other" name="medOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyMed" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Medium -->
                </div>
                <div class="tab">
-                  <h4>4. How?</h4>
+                  <h4>5. How?</h4>
                   <!-- Evidence -->
                   <div id="evi">
                      <h2>Choose your evidence</h2>
@@ -262,6 +331,12 @@
                         <label>Direct student feedback</label>
                      </div>
                      <input id="other" name="eviOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyEvi" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Evidence -->
                   <br>
                   <!-- Prompt -->
@@ -280,6 +355,12 @@
                         <label>Scripted roles</label>
                      </div>
                      <input id="other" name="proOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyPro" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Prompt -->
                   <br>
                   <!-- Access -->
@@ -314,6 +395,12 @@
                         <label>Researchers</label>
                      </div>
                      <input id="other" name="accOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyAcc" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Access -->
                   <br>
                   <!-- Outcome -->
@@ -340,6 +427,12 @@
                         <label>Other administrator</label>
                      </div>
                      <input id="other" name="outOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whyOut" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Outcome -->
                   <br>
                   <!-- Sustain -->
@@ -362,86 +455,18 @@
                         <label>Support from coaches</label>
                      </div>
                      <input id="other" name="susOther" type="text" placeholder="Other" /> </div>
+                  <br>
+                  <label>
+                     <h2>Why did you select this?</h2></label>
+                  <br>
+                  <input class="formbox" type="text" name="whySus" id="exampleFormControlInput1" placeholder="Type your answer here">
+                  <br>
                   <!-- Sustain -->
                </div>
-               <div class="tab">
-                  <h4>5. When? pt.2</h4>
-                  <h2>Your selected moment:</h2>
-                  <p id="momResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyMom" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
-                  <br>
-                  <h2>Your selected frequency:</h2>
-                  <p id="freqResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyFreq" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
-                  <br>
-                  <h2>Your selected duration:</h2>
-                  <p id="durResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyDur" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here"> </div>
-               <div class="tab">
-                  <h4>6. What? pt.2</h4>
-                  <h2>Your selected content:</h2>
-                  <p id="conResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyCon" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
-                  <br>
-                  <h2>Your selected pedagoly:</h2>
-                  <p id="pedResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyPed" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
-                  <br>
-                  <h2>Your selected technology:</h2>
-                  <p id="techResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyTech" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here"> </div>
-               <div class="tab">
-                  <h4>6. Where? pt.2</h4>
-                  <h2>Your selected facilitation:</h2>
-                  <p id="facResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyFac" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
-                  <br>
-                  <h2>Your selected location:</h2>
-                  <p id="locResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyLoc" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
-                  <br>
-                  <h2>Your selected medium:</h2>
-                  <p id="medResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyMed" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here"> </div>
-               <div class="tab">
-                  <h4>6. How? pt.2</h4>
-                  <h2>Your selected evidence:</h2>
-                  <p id="eviResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyEvi" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
-                  <br>
-                  <h2>Your selected prompt:</h2>
-                  <p id="proResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyPro" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
-                  <br>
-                  <h2>Who has access:</h2>
-                  <p id="accResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyAcc" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
-                  <br>
-                  <h2>Your selected reflection outcome</h2>
-                  <p id="outResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whyOut" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here">
-                  <br>
-                  <h2>How you sustain</h2>
-                  <p id="susResults">None</p>
-                  <label>Why did you select this?</label>
-                  <input type="text" name="whySus" class="form-control" id="exampleFormControlInput1" placeholder="Type your answer here"> </div>
                <br>
                <div class="text-end">
-                  <button type="button" class="btn btn-dark" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                  <button type="button" class="btn btn-dark" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                  <button type="button" class="btn btn-primary" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                  <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">Next</button>
                </div>
             </form>
          </div>

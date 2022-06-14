@@ -42,3 +42,20 @@ function nextPrev(n) {
   }
   showTab(currentTab);
 }
+
+var progress = document.getElementById("progress-bar");
+var now = progress.ariaValueNow
+var button = document.getElementById('nextBtn');
+var button2 = document.getElementById('prevBtn');
+
+button.addEventListener('click', function addProgress() {
+  now = parseFloat(now) + 20
+  var nowWitdh = parseFloat(now).toFixed(2)+"%"
+  document.getElementById("progress-bar").style.width = nowWitdh
+});
+
+button2.addEventListener('click', function takeProgress() {
+  now = parseFloat(now) - 20
+  var nowWitdh = parseFloat(now).toFixed(2)+"%"
+  document.getElementById("progress-bar").style.width = nowWitdh
+});
